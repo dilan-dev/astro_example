@@ -1,0 +1,49 @@
+---
+const sponsor = [
+    {
+        id: "nike",
+        name: "NIKE",
+        url: "https://nike.com"
+    },
+    {
+        id: "adidas",
+        name: "ADIDAS",
+        url: "https://adidas.com"
+    },
+    {
+        id: "puma",
+        name: "PUMA",
+        url: "https://puma.com"
+    },
+]
+---
+
+<section class="xdd">
+    <h3>Creando un grid de ventanas de contenido</h3>
+    <p>Gracias a TailWind podemos centrar esto</p>
+
+    <div class="xd">
+        {
+        sponsor.map(({id, name, url}) => (
+            <a title={'Visita ${name}'} href={url}>{name}</a>
+        ))
+        }
+    </div>
+
+</section>
+
+--- si no tenemos tailwind para dar estilos mediante clases, agregamos los estilos debajo de cada sección 
+--- etiqueta style
+
+<style>
+    .xd{
+        color: white;
+        display: grid;
+        grid-column: 2;
+        gap: 8;
+    }
+    .xdd{
+        color: white;
+    }
+
+</style>
